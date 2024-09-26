@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package decimal_convert;
-
 /**
  *
  * @author bams
@@ -16,6 +15,8 @@ public class Decimal_convert {
     public static void main(String[] args) {
         Interface inter = new Interface();
         inter.setVisible(true);
+
+
     }
     
 }
