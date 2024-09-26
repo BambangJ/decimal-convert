@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package decimal_convert;
-
+import java.math.BigInteger;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
@@ -27,18 +27,21 @@ public class Interface extends javax.swing.JFrame {
      
         
     }
-    public void calc(){
-        String D=Desc.getText();
-        int i =Integer.parseInt(D);
-        String BR=Integer.toBinaryString(i);
-        Binary.setText(BR);
 
-        String HR=Integer.toHexString(i);
-        Hexa.setText(HR);
+public void calc() {
+    String D = Desc.getText();
+    BigInteger i = new BigInteger(D);
 
-        String OR=Integer.toOctalString(i);
-        Octa.setText(OR);
+    String BR = i.toString(2); // Convert to binary
+    Binary.setText(BR);
+
+    String HR = i.toString(16); // Convert to hexadecimal
+    Hexa.setText(HR);
+
+    String OR = i.toString(8); // Convert to octal
+    Octa.setText(OR);
 }
+
     public void nol(){
         if(Desc.getText().length() <= 0){
             Desc.setText("0");
